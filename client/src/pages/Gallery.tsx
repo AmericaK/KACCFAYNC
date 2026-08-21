@@ -15,7 +15,6 @@ const gallery = [
     year: "2025",
     events: [
       { title: "참전용사·이민 1세대 감사잔치", date: "2025.11.15", photos: ["/gallery/2025-appreciation-01.jpg", "/gallery/2025-appreciation-02.jpg", "/gallery/2025-appreciation-03.jpg", "/gallery/2025-appreciation-04.jpg", "/gallery/2025-appreciation-05.jpg", "/gallery/2025-appreciation-06.jpg", "/gallery/2025-appreciation-07.jpg", "/gallery/2025-appreciation-08.jpg", "/gallery/2025-appreciation-09.jpg"] },
-      { title: "랄리 한인상공회의소 교류", date: "", photos: ["/gallery/2025-raleigh.jpg"] },
     ],
   },
   {
