@@ -60,7 +60,7 @@ export default function About() {
         <SectionLabel number="03" label="LEADERSHIP" />
         <div className="leadership-cols">
           <div className="leadership-col">
-            <div className="lead-photo"><img src="/leadership-group.jpg" alt="훼잇빌 한인상공회의소 임원진" /></div>
+            <a className="lead-photo" href="https://tinyurl.com/2nydfxb6" target="_blank" rel="noreferrer" style={{ display: "block" }}><img src="/leadership-group.jpg" alt="훼잇빌 한인상공회의소 임원진" /></a>
             <h2>로컬 한인상공인의 리더십,<br /><span>글로벌 한상으로 이어지다.</span></h2>
           </div>
           <div className="leadership-col">
