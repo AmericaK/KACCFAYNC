@@ -67,7 +67,7 @@ export function SiteLayout({ children }: { children: React.ReactNode }) {
       </header>
       <main>{children}</main>
       <footer className="site-footer">
-        <div className="footer-seal"><img src="/logo-wide.png" alt="훼잇빌 한인상공회의소 로고" /></div>
+        <div className="footer-seal" style={{ display: "inline-flex", alignItems: "center", background: "#fffdfa", borderRadius: "12px", padding: "12px 18px", width: "fit-content" }}><img src="/logo-wide.png" alt="훼잇빌 한인상공회의소 로고" style={{ width: "auto", height: "46px", objectFit: "contain", display: "block" }} /></div>
         <div className="footer-title">
           <p className="eyebrow light">KACC FAYETTEVILLE, NC</p>
           <h2>훼잇빌에서 함께 성장해 온<br />한인 상공인들의 보금자리.</h2>
