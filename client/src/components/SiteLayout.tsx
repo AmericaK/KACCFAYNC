@@ -68,10 +68,10 @@ export function SiteLayout({ children }: { children: React.ReactNode }) {
       </header>
       <main>{children}</main>
       <footer className="site-footer">
-        <div className="footer-seal"><img src={markUrl} alt="" /><span>CONNECTING<br />COMMUNITY</span></div>
+        <div className="footer-seal"><img src={markUrl} alt="훼잇빌 한인상공회의소 로고" /></div>
         <div className="footer-title">
           <p className="eyebrow light">KACC FAYETTEVILLE, NC</p>
-          <h2>지역의 기회를<br />함께 연결합니다.</h2>
+          <h2>훼잇빌에서 함께 일해 온<br />한인 사업인들의 자리.</h2>
         </div>
         <div className="footer-links">
           <a href="https://www.facebook.com/kacc.faync" target="_blank" rel="noreferrer">Facebook 공식 채널 <ArrowUpRight size={15} /></a>
@@ -91,8 +91,6 @@ export function PageIntro({ number, eyebrow, title, description }: { number: str
         <h1>{title}</h1>
         <p className="page-intro-description">{description}</p>
       </div>
-      <div className="intro-seal" aria-hidden="true"><span>FAYETTEVILLE · NC</span><b>{number}</b><span>COMMUNITY RECORD</span></div>
-      <div className="ribbon-lines" aria-hidden="true"><i /><i /><i /></div>
     </section>
   );
 }
