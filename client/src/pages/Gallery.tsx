@@ -79,6 +79,8 @@ const gallery = [
   },
 ];
 
+const records = ["/gallery/record-01.jpg", "/gallery/record-02.jpg", "/gallery/record-03.jpg", "/gallery/record-04.jpg", "/gallery/record-05.jpg", "/gallery/record-06.jpg", "/gallery/record-07.jpg", "/gallery/record-08.jpg", "/gallery/record-09.jpg", "/gallery/record-10.jpg", "/gallery/record-11.jpg", "/gallery/record-12.jpg", "/gallery/record-13.jpg", "/gallery/record-14.jpg", "/gallery/record-15.jpg", "/gallery/record-16.jpg", "/gallery/record-17.jpg", "/gallery/record-18.jpg"];
+
 export default function Gallery() {
   useEffect(() => {
     const id = window.location.hash.slice(1);
@@ -92,6 +94,16 @@ export default function Gallery() {
       <PageIntro number="03" eyebrow="GALLERY" title={<>사진으로 기억되는<br /><em>소중한 활동 기록</em></>} description="2015년부터 이어 온 훼잇빌 한인상공회의소의 활동을 연도별로 살펴보세요." />
       <section className="gallery-intro-strip"><Images size={22} strokeWidth={1.45} /><p>훼잇빌 한인상공회의소의 실제 활동 사진입니다. <strong>더 많은 현장 사진은 공식 Facebook 아카이브에서 확인하세요.</strong></p><a href="https://www.facebook.com/kacc.faync" target="_blank" rel="noreferrer">공식 사진 보기 <ArrowUpRight size={15} /></a></section>
       <div className="gallery-years">
+        <section className="gallery-year" id="records">
+          <div className="gallery-year-head"><h2>행사 기록들</h2><span /></div>
+          <div className="gallery-event">
+            <div className="gallery-grid">
+              {records.map((src, j) => (
+                <a className="gallery-thumb gallery-thumb--doc" href={src} target="_blank" rel="noreferrer" key={src}><img src={src} alt={`행사 기록 ${j + 1}`} loading="lazy" /></a>
+              ))}
+            </div>
+          </div>
+        </section>
         {gallery.map((yr) => (
           <section className="gallery-year" id={yr.year} key={yr.year}>
             <div className="gallery-year-head"><h2>{yr.year}</h2><span /></div>
