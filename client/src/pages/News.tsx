@@ -30,7 +30,7 @@ const archive = [
 export default function News() {
   return (
     <SiteLayout>
-      <PageIntro number="02" eyebrow="NEWS & ARCHIVE" title={<>지금까지의<br /><em>활동 기록.</em></>} description="사업인 지원, 교육, 지역사회 교류까지. 훼잇빌 한인상공회의소가 이어 온 주요 활동입니다." />
+      <PageIntro number="02" eyebrow="NEWS & ARCHIVE" title={<>지금까지의<br /><em>생생한 활동 기록</em></>} description="사업인 지원, 교육, 지역사회 교류까지. 훼잇빌 한인상공회의소가 이어온 주요 활동입니다." />
 
       <section className="feature-news">
         <SectionLabel number="FEATURE" label="RECENT STORY" />
@@ -38,7 +38,7 @@ export default function News() {
           <div className="feature-news-image"><img src={networkingUrl} alt="2025 훼잇빌 한인 1세대를 위한 감사잔치 현장" /><span>2025 감사잔치 · Gates Four Country Club</span></div>
           <div className="feature-news-copy">
             <div className="feature-news-meta"><CalendarDays size={15} /><span>2026 · ATLANTA K</span></div>
-            <h2>미군기지 곁에서 일군 한인경제…<br /><em>훼잇빌 상의 이끈 여성들</em></h2>
+            <h2>군기지 곁에서 일군 한인경제<br /><em>훼잇빌 상의 이끈 여성들</em></h2>
             <p>지역 한인경제의 성장과 상공회의소의 설립 배경, 여성 지도자들이 이어 온 리더십, 그리고 사업인 협력·차세대 교육·지역 문화교류 활동을 다룬 보도입니다.</p>
             <div style={{ display: "flex", flexWrap: "wrap", gap: "10px" }}>
               <a href={articleUrl} target="_blank" rel="noreferrer" className="button-link">기사 원문 보기 <ExternalLink size={16} /></a>
