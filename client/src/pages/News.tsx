@@ -8,15 +8,19 @@ import { PageIntro, SectionLabel, SiteLayout } from "@/components/SiteLayout";
 
 const networkingUrl = "/news-feature.jpg";
 const articleUrl = "https://atlantak.com/%eb%af%b8%ea%b5%b0%ea%b8%b0%ec%a7%80-%ea%b3%81%ec%97%90%ec%84%9c-%ec%9d%bc%ea%b5%b0-%ed%95%9c%ec%9d%b8%ea%b2%bd%ec%a0%9c%ed%9b%bc%ec%9e%87%eb%b9%8c-%ec%83%81%ec%9d%98-%ec%9d%b4/";
-const gratitudeArticleUrl = "https://atlantak.com/%ed%9b%bc%ec%9e%97%eb%b9%8c-%ed%95%9c%ec%9d%b8%ec%83%81%ec%9d%98-%ec%9d%b4%eb%af%bc-1%ec%84%b8%eb%8c%80%c2%b7%ec%b0%b8%ec%a0%84%ec%9a%a9%ec%82%ac-%ec%b4%88%ec%b2%ad-%ea%b0%90%ec%82%ac/";
+const gratitudeArticleUrl = "https://tinyurl.com/4pznhcsv";
 const videoUrl = "https://www.youtube.com/watch?v=CTFVAwed78Y";
 
 const archive = [
-  { year: "2026", title: "전국수학경시대회 훼잇빌 지역 행사 참여", body: "KSEA가 주최한 전국수학경시대회 훼잇빌 지역 행사에 참여해 청소년들의 과학·수학 분야 참여를 지원했습니다.", tag: "차세대" },
-  { year: "2020", title: "사업 운영을 위한 세무 세미나", body: "공인회계사를 초청해 자영업자, 임대사업자, 소규모 사업자를 위한 세금보고와 사업 운영 정보를 나누었습니다.", tag: "실용정보" },
-  { year: "2019", title: "차세대 리더 양성 교육 세미나", body: "지역 학부모와 주민을 대상으로 차세대 교육과 리더십의 중요성을 함께 나누는 자리를 마련했습니다.", tag: "교육" },
-  { year: "2018", title: "한인업소록 및 생활정보 가이드 발간", body: "지역 한인업소 정보와 생활 안내를 담아 소비자·사업체·신규 정착자를 잇는 정보 기반을 만들었습니다.", tag: "지역연결" },
-  { year: "2015", title: "한인 친선·교류 골프대회 개최", body: "훼잇빌, 랄리, 그린스보로 지역 한인들이 함께한 친선과 교류의 행사를 열었습니다.", tag: "네트워크" },
+  { year: "2026", title: "전국수학경시대회 훼잇빌 지역 개최", body: "재미한인과학기술자협회(KSEA)와 함께 4~11학년 학생을 위한 전국수학경시대회 훼잇빌 지역 대회를 성 김대건 안드레아 성당에서 열었습니다.", tag: "차세대" },
+  { year: "2025", title: "참전용사·이민 1세대 감사잔치", body: "게이트 포 골프&컨트리클럽에서 한국전 참전용사와 65세 이상 이민 1세대를 초청해 감사잔치를 열었습니다. 약 250명이 참석해 1세대의 정착 이야기를 나눴습니다.", tag: "공동체" },
+  { year: "2023", title: "제5대 회장 이·취임식", body: "게이트 포 골프&컨트리클럽에서 이·취임식을 열고, 김미경 회장에 이어 김현철 회장이 상공회의소를 이끌게 되었습니다.", tag: "리더십" },
+  { year: "2022", title: "NC 훼잇빌 한인친선 골프대회", body: "회원과 지역 한인이 함께한 친선 골프대회로 사업인 간 교류의 장을 이어 갔습니다.", tag: "네트워크" },
+  { year: "2020", title: "사업자를 위한 세무(Tax) 세미나", body: "공인회계사 Andrew Hong을 초청해 자영업자·임대사업자·소규모 사업자를 위한 세금보고 정보를 나눴습니다.", tag: "실용정보" },
+  { year: "2019", title: "신임 회장 취임과 차세대 교육세미나", body: "권혁례 회장에 이어 김미경 회장이 취임했으며(현지 언론 보도), 임한규 교수를 초청해 차세대 리더 양성 교육세미나를 열었습니다.", tag: "리더십" },
+  { year: "2018", title: "한인업소록 및 생활정보 가이드 발간", body: "지역 한인업소 정보와 생활 안내를 담은 「훼잇빌 한인 비즈니스 디렉토리 & 생활정보 가이드」를 발간해 소비자·사업체·신규 정착자를 이었습니다.", tag: "지역연결" },
+  { year: "2016", title: "제15차 세계 한상대회 참가", body: "회장단이 제15차 세계 한상대회에 참가해 지역 경제 현안과 한상 네트워크 확대를 논의했습니다.", tag: "한상네트워크" },
+  { year: "2015", title: "친선 골프대회 개최", body: "게이트 포 골프&컨트리클럽에서 훼잇빌·랄리·그린스보로 지역 한인이 함께한 친선 골프대회를 열었습니다.", tag: "네트워크" },
 ];
 
 export default function News() {
@@ -43,9 +47,9 @@ export default function News() {
 
       <section className="archive-section">
         <SectionLabel number="ARCHIVE" label="SELECTED MILESTONES" />
-        <div className="archive-heading"><h2>일상의 필요에서<br /><span>지역의 자부심까지.</span></h2><p>아래 기록은 공개 보도를 바탕으로 구성했습니다. 최신 일정과 활동은 공식 Facebook 채널에서 확인할 수 있습니다.</p></div>
+        <div className="archive-heading"><h2>일상의 필요에서<br /><span>지역의 자부심까지.</span></h2><p>아래 기록은 상공회의소 자료와 공개 보도를 바탕으로 정리했습니다. 최신 일정은 공식 Facebook에서 확인하실 수 있습니다.</p></div>
         <div className="archive-list">
-          {archive.map((item) => <article className="archive-item" key={item.year + item.title}><div className="archive-year"><span>{item.year}</span><small>RECORD</small></div><div className="archive-copy"><span>{item.tag} · 공개 보도 기록</span><h3>{item.title}</h3><p>{item.body}</p></div><a href={articleUrl} target="_blank" rel="noreferrer" aria-label={`${item.title} 관련 기사 보기`}><ArrowUpRight size={19} /></a></article>)}
+          {archive.map((item) => <article className="archive-item" key={item.year + item.title}><div className="archive-year"><span>{item.year}</span><small>RECORD</small></div><div className="archive-copy"><span>{item.tag} · 활동 기록</span><h3>{item.title}</h3><p>{item.body}</p></div><a href={articleUrl} target="_blank" rel="noreferrer" aria-label={`${item.title} 관련 기사 보기`}><ArrowUpRight size={19} /></a></article>)}
         </div>
       </section>
 
