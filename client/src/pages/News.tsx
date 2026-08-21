@@ -10,6 +10,7 @@ const networkingUrl = "/news-feature.jpg";
 const articleUrl = "https://atlantak.com/%eb%af%b8%ea%b5%b0%ea%b8%b0%ec%a7%80-%ea%b3%81%ec%97%90%ec%84%9c-%ec%9d%bc%ea%b5%b0-%ed%95%9c%ec%9d%b8%ea%b2%bd%ec%a0%9c%ed%9b%bc%ec%9e%87%eb%b9%8c-%ec%83%81%ec%9d%98-%ec%9d%b4/";
 const gratitudeArticleUrl = "https://tinyurl.com/4pznhcsv";
 const videoUrl = "https://www.youtube.com/watch?v=CTFVAwed78Y";
+const foundingPresidentUrl = "https://tinyurl.com/stn348rx";
 
 const archive = [
   { year: "2026", title: "전국수학경시대회 훼잇빌 지역 개최", body: "재미한인과학기술자협회(KSEA)와 함께 4~11학년 학생을 위한 전국수학경시대회 훼잇빌 지역 대회를 성 김대건 안드레아 성당에서 열었습니다.", tag: "차세대" },
@@ -44,6 +45,7 @@ export default function News() {
               <a href={articleUrl} target="_blank" rel="noreferrer" className="button-link">기사 원문 보기 <ExternalLink size={16} /></a>
               <a href={gratitudeArticleUrl} target="_blank" rel="noreferrer" className="button-link">감사잔치 기사 <ExternalLink size={16} /></a>
               <a href={videoUrl} target="_blank" rel="noreferrer" className="button-link">행사 영상 보기 <ArrowUpRight size={16} /></a>
+              <a href={foundingPresidentUrl} target="_blank" rel="noreferrer" className="button-link">권혁례 초대회장 기사 <ExternalLink size={16} /></a>
             </div>
           </div>
         </article>
