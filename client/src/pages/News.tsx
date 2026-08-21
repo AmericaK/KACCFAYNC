@@ -1,114 +1,65 @@
 /**
- * Gallery — 연도별·행사별 실제 활동 사진 아카이브.
+ * Design reminder — 지역을 잇는 공식 문장:
+ * civic archive layout, strong year stamps and generous paper-white fields for public records.
  */
-import { ArrowUpRight, Facebook, Images } from "lucide-react";
-import { PageIntro, SiteLayout } from "@/components/SiteLayout";
-import { useEffect } from "react";
+import { ArrowUpRight, CalendarDays, ExternalLink } from "lucide-react";
+import { Link } from "wouter";
+import { PageIntro, SectionLabel, SiteLayout } from "@/components/SiteLayout";
 
-const gallery = [
-  {
-    year: "2026",
-    events: [
-      { title: "전국수학경시대회 훼잇빌 지역 개최", date: "", photos: ["/gallery/2026-math.jpg"] },
-    ],
-  },
-  {
-    year: "2025",
-    events: [
-      { title: "참전용사·이민 1세대 감사잔치", date: "2025.11.15", photos: ["/gallery/2025-appreciation-01.jpg", "/gallery/2025-appreciation-02.jpg", "/gallery/2025-appreciation-03.jpg", "/gallery/2025-appreciation-04.jpg", "/gallery/2025-appreciation-05.jpg", "/gallery/2025-appreciation-06.jpg", "/gallery/2025-appreciation-07.jpg", "/gallery/2025-appreciation-08.jpg", "/gallery/2025-appreciation-09.jpg"] },
-    ],
-  },
-  {
-    year: "2024",
-    events: [
-      { title: "지역 커뮤니티 홀리데이 나눔", date: "", photos: ["/gallery/2024-holiday.jpg"] },
-    ],
-  },
-  {
-    year: "2023",
-    events: [
-      { title: "제5대 회장 이·취임식", date: "", photos: ["/gallery/2023-inauguration.jpg"] },
-    ],
-  },
-  {
-    year: "2022",
-    events: [
-      { title: "NC 훼잇빌 한인친선 골프대회", date: "", photos: ["/gallery/2022-golf.jpg"] },
-    ],
-  },
-  {
-    year: "2021",
-    events: [
-      { title: "비즈니스 리더 오찬", date: "", photos: ["/gallery/2021-luncheon-01.jpg", "/gallery/2021-luncheon-02.jpg"] },
-    ],
-  },
-  {
-    year: "2020",
-    events: [
-      { title: "코로나19 마스크 기부·지역 나눔", date: "", photos: ["/gallery/2020-covid-01.jpg", "/gallery/2020-covid-02.jpg", "/gallery/2020-covid-03.jpg", "/gallery/2020-covid-04.jpg", "/gallery/2020-covid-05.jpg", "/gallery/2020-covid-06.jpg", "/gallery/2020-covid-07.jpg", "/gallery/2020-covid-08.jpg", "/gallery/2020-covid-09.jpg", "/gallery/2020-covid-10.jpg", "/gallery/2020-covid-11.jpg"] },
-      { title: "사업자를 위한 세무 세미나", date: "", photos: ["/gallery/2020-tax.jpg"] },
-    ],
-  },
-  {
-    year: "2019",
-    events: [
-      { title: "제4대 회장 이·취임식", date: "2019.02.24", photos: ["/gallery/2019-inauguration-01.jpg", "/gallery/2019-inauguration-02.jpg", "/gallery/2019-inauguration-03.jpg", "/gallery/2019-inauguration-04.jpg", "/gallery/2019-inauguration-05.jpg", "/gallery/2019-inauguration-06.jpg", "/gallery/2019-inauguration-07.jpg", "/gallery/2019-inauguration-08.jpg", "/gallery/2019-inauguration-09.jpg", "/gallery/2019-inauguration-10.jpg", "/gallery/2019-inauguration-11.jpg", "/gallery/2019-inauguration-12.jpg", "/gallery/2019-inauguration-13.jpg"] },
-      { title: "차세대 리더 교육세미나", date: "2019.08.25", photos: ["/gallery/2019-seminar-p-01.jpg", "/gallery/2019-seminar-p-02.jpg", "/gallery/2019-seminar-p-03.jpg", "/gallery/2019-seminar-p-04.jpg", "/gallery/2019-seminar-p-05.jpg", "/gallery/2019-seminar.jpg"] },
-      { title: "친선 골프대회", date: "", photos: ["/gallery/2019-golf-01.jpg", "/gallery/2019-golf-02.jpg", "/gallery/2019-golf-03.jpg", "/gallery/2019-golf-04.jpg", "/gallery/2019-golf-05.jpg"] },
-      { title: "미주 한인상공회의소(KACC-USA) 교류", date: "", photos: ["/gallery/2019-kaccusa-01.jpg", "/gallery/2019-kaccusa-02.jpg"] },
-      { title: "연말 커뮤니티 모임", date: "", photos: ["/gallery/2019-yearend.jpg"] },
-    ],
-  },
-  {
-    year: "2018",
-    events: [
-      { title: "한인업소록·생활정보 가이드 발간", date: "", photos: ["/gallery/2018-directory.jpg"] },
-    ],
-  },
-  {
-    year: "2016",
-    events: [
-      { title: "제15차 세계 한상대회 참가", date: "", photos: ["/gallery/2016-hansang.jpg"] },
-    ],
-  },
-  {
-    year: "2015",
-    events: [
-      { title: "한인 친선 골프대회", date: "", photos: ["/gallery/2015-golf.jpg"] },
-    ],
-  },
+const networkingUrl = "/news-feature.jpg";
+const articleUrl = "https://atlantak.com/%eb%af%b8%ea%b5%b0%ea%b8%b0%ec%a7%80-%ea%b3%81%ec%97%90%ec%84%9c-%ec%9d%bc%ea%b5%b0-%ed%95%9c%ec%9d%b8%ea%b2%bd%ec%a0%9c%ed%9b%bc%ec%9e%87%eb%b9%8c-%ec%83%81%ec%9d%98-%ec%9d%b4/";
+const gratitudeArticleUrl = "https://tinyurl.com/4pznhcsv";
+const videoUrl = "https://www.youtube.com/watch?v=CTFVAwed78Y";
+
+const archive = [
+  { year: "2026", title: "전국수학경시대회 훼잇빌 지역 개최", body: "재미한인과학기술자협회(KSEA)와 함께 4~11학년 학생을 위한 전국수학경시대회 훼잇빌 지역 대회를 성 김대건 안드레아 성당에서 열었습니다.", tag: "차세대" },
+  { year: "2025", title: "참전용사·이민 1세대 감사잔치", body: "게이트 포 골프&컨트리클럽에서 한국전 참전용사와 65세 이상 이민 1세대를 초청해 감사잔치를 열었습니다. 약 250명이 참석해 1세대의 정착 이야기를 나눴습니다.", tag: "공동체" },
+  { year: "2024", title: "지역 커뮤니티 홀리데이 나눔", body: "연말을 맞아 지역 이웃과 함께하는 홀리데이 나눔·선물 전달로 지역사회에 감사를 전했습니다.", tag: "지역나눔" },
+  { year: "2023", title: "제5대 회장 이·취임식", body: "게이트 포 골프&컨트리클럽에서 이·취임식을 열고, 김미경 회장에 이어 김현철 회장이 상공회의소를 이끌게 되었습니다.", tag: "리더십" },
+  { year: "2022", title: "NC 훼잇빌 한인친선 골프대회", body: "회원과 지역 한인이 함께한 친선 골프대회로 사업인 간 교류의 장을 이어 갔습니다.", tag: "네트워크" },
+  { year: "2021", title: "비즈니스 리더 오찬", body: "지역 사업인들이 한자리에 모여 정보를 나누고 협력을 논의하는 비즈니스 리더 오찬을 열었습니다.", tag: "네트워크" },
+  { year: "2020", title: "코로나19 마스크 기부·지역 나눔", body: "코로나19 시기, 지역 한인 업소와 이웃에 마스크를 전달하며 어려운 시기를 함께 견뎠습니다.", tag: "지역나눔" },
+  { year: "2020", title: "사업자를 위한 세무(Tax) 세미나", body: "공인회계사 Andrew Hong을 초청해 자영업자·임대사업자·소규모 사업자를 위한 세금보고 정보를 나눴습니다.", tag: "실용정보" },
+  { year: "2019", title: "신임 회장 취임과 차세대 교육세미나", body: "권혁례 회장에 이어 김미경 회장이 취임했으며(현지 언론 보도), 임한규 교수를 초청해 차세대 리더 양성 교육세미나를 열었습니다.", tag: "리더십" },
+  { year: "2019", title: "연말 커뮤니티 모임", body: "회원과 지역 한인이 함께한 연말 커뮤니티 모임으로 한 해의 활동을 마무리했습니다.", tag: "공동체" },
+  { year: "2018", title: "한인업소록 및 생활정보 가이드 발간", body: "지역 한인업소 정보와 생활 안내를 담은 「훼잇빌 한인 비즈니스 디렉토리 & 생활정보 가이드」를 발간해 소비자·사업체·신규 정착자를 이었습니다.", tag: "지역연결" },
+  { year: "2016", title: "제15차 세계 한상대회 참가", body: "회장단이 제15차 세계 한상대회에 참가해 지역 경제 현안과 한상 네트워크 확대를 논의했습니다.", tag: "한상네트워크" },
+  { year: "2015", title: "친선 골프대회 개최", body: "게이트 포 골프&컨트리클럽에서 훼잇빌·랄리·그린스보로 지역 한인이 함께한 친선 골프대회를 열었습니다.", tag: "네트워크" },
 ];
 
-export default function Gallery() {
-  useEffect(() => {
-    const id = window.location.hash.slice(1);
-    if (id) {
-      const el = document.getElementById(id);
-      if (el) el.scrollIntoView({ behavior: "smooth" });
-    }
-  }, []);
+export default function News() {
   return (
     <SiteLayout>
-      <PageIntro number="03" eyebrow="GALLERY" title={<>사진으로 남긴<br /><em>활동의 기록.</em></>} description="2015년부터 이어 온 훼잇빌 한인상공회의소의 활동을 연도별로 살펴보세요." />
-      <section className="gallery-intro-strip"><Images size={22} strokeWidth={1.45} /><p>훼잇빌 한인상공회의소의 실제 활동 사진입니다. <strong>더 많은 현장 사진은 공식 Facebook 아카이브에서 확인하세요.</strong></p><a href="https://www.facebook.com/kacc.faync" target="_blank" rel="noreferrer">공식 사진 보기 <ArrowUpRight size={15} /></a></section>
-      <div className="gallery-years">
-        {gallery.map((yr) => (
-          <section className="gallery-year" id={yr.year} key={yr.year}>
-            <div className="gallery-year-head"><h2>{yr.year}</h2><span /></div>
-            {yr.events.map((ev) => (
-              <div className="gallery-event" key={ev.title}>
-                <div className="gallery-event-head"><h3>{ev.title}</h3>{ev.date && <span>{ev.date}</span>}</div>
-                <div className="gallery-grid">
-                  {ev.photos.map((src, j) => (
-                    <a className="gallery-thumb" href={src} target="_blank" rel="noreferrer" key={src}><img src={src} alt={ev.title + " " + (j + 1)} loading="lazy" /></a>
-                  ))}
-                </div>
-              </div>
-            ))}
-          </section>
-        ))}
-      </div>
-      <section className="facebook-panel"><div><p className="eyebrow light">OFFICIAL PHOTO ARCHIVE</p><h2>더 많은 현장 사진은<br /><em>공식 Facebook에서.</em></h2></div><a href="https://www.facebook.com/kacc.faync" target="_blank" rel="noreferrer" className="facebook-button"><Facebook size={19} /> Kacc Fay NC <ArrowUpRight size={17} /></a></section>
+      <PageIntro number="02" eyebrow="NEWS & ARCHIVE" title={<>지금까지의<br /><em>활동 기록.</em></>} description="사업인 지원, 교육, 지역사회 교류까지. 훼잇빌 한인상공회의소가 이어 온 주요 활동입니다." />
+
+      <section className="feature-news">
+        <SectionLabel number="FEATURE" label="RECENT STORY" />
+        <article className="feature-news-card">
+          <div className="feature-news-image"><img src={networkingUrl} alt="2025 훼잇빌 한인 1세대를 위한 감사잔치 현장" /><span>2025 감사잔치 · Gates Four Country Club</span></div>
+          <div className="feature-news-copy">
+            <div className="feature-news-meta"><CalendarDays size={15} /><span>2026 · ATLANTA K</span></div>
+            <h2>미군기지 곁에서 일군 한인경제…<br /><em>훼잇빌 상의 이끈 여성들</em></h2>
+            <p>지역 한인경제의 성장과 상공회의소의 설립 배경, 여성 지도자들이 이어 온 리더십, 그리고 사업인 협력·차세대 교육·지역 문화교류 활동을 다룬 보도입니다.</p>
+            <div style={{ display: "flex", flexWrap: "wrap", gap: "10px" }}>
+              <a href={articleUrl} target="_blank" rel="noreferrer" className="button-link">기사 원문 보기 <ExternalLink size={16} /></a>
+              <a href={gratitudeArticleUrl} target="_blank" rel="noreferrer" className="button-link">감사잔치 기사 <ExternalLink size={16} /></a>
+              <a href={videoUrl} target="_blank" rel="noreferrer" className="button-link">행사 영상 보기 <ArrowUpRight size={16} /></a>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <section className="archive-section">
+        <SectionLabel number="ARCHIVE" label="SELECTED MILESTONES" />
+        <div className="archive-heading"><h2>일상의 필요에서<br /><span>지역의 자부심까지.</span></h2><p>아래 기록은 상공회의소 자료와 공개 보도를 바탕으로 정리했습니다. 최신 일정은 공식 Facebook에서 확인하실 수 있습니다.</p></div>
+        <div className="archive-list">
+          {archive.map((item) => <article className="archive-item" key={item.year + item.title}><div className="archive-year"><span>{item.year}</span><small>RECORD</small></div><div className="archive-copy"><span>{item.tag} · 활동 기록</span><h3>{item.title}</h3><p>{item.body}</p></div><Link href={`/gallery#${item.year}`} aria-label={`${item.title} 사진 보기`}><ArrowUpRight size={19} /></Link></article>)}
+        </div>
+      </section>
+
+      <section className="news-bottom-cta">
+        <p className="eyebrow light">GALLERY</p><h2>사진으로 보는<br />상공회의소의 활동.</h2><Link href="/gallery" className="button-link button-link--light">갤러리로 이동 <ArrowUpRight size={16} /></Link>
+      </section>
     </SiteLayout>
   );
 }
