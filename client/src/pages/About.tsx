@@ -61,10 +61,10 @@ export default function About() {
         <div className="leadership-cols">
           <div className="leadership-col">
             <a className="lead-photo" href="https://tinyurl.com/2nydfxb6" target="_blank" rel="noreferrer" style={{ display: "block" }}><img src="/leadership-group.jpg" alt="훼잇빌 한인상공회의소 임원진" /></a>
-            <h2>로컬 한인상공인의 리더십,글로벌 한상으로 이어지다.</span></h2>
+            <h2>로컬 한인상공인의 리더십,<br /><span>글로벌 한상으로 이어지다.</span></h2>
           </div>
           <div className="leadership-col">
-            <div className="lead-photo"><img src="/president.JPG" alt="훼잇빌 한인상공회의소 김현철 회장" /></div>
+            <div className="lead-photo"><img src="/president.jpg" alt="훼잇빌 한인상공회의소 김현철 회장" /></div>
             <div className="president-name"><span>회장 · PRESIDENT</span><strong>김현철</strong></div>
             <p>훼잇빌 한인상공회의소는 노스캐롤라이나 훼잇빌 지역 한인 사업체의 성장과 성공, 협력을 지원하고 증진하기 위해 설립된 비영리 단체입니다. 회원 간 네트워크 형성, 정보 공유, 경제 발전을 통해 지역 비즈니스 공동체를 강화하는 것을 목표로 합니다. 또한 지역사회와의 협력과 소통을 통해 한인 비즈니스의 권익을 대표하고 신규 사업자를 돕는 역할을 합니다.</p>
           </div>
