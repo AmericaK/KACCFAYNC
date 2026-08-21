@@ -7,7 +7,6 @@ import { Menu, X, ArrowUpRight, Facebook } from "lucide-react";
 import { useEffect, useState } from "react";
 
 const logoUrl = "/logo.png";
-const markUrl = "/logo-wide.png";
 
 const navItems = [
   { label: "About", labelKr: "소개", href: "/about" },
@@ -68,7 +67,7 @@ export function SiteLayout({ children }: { children: React.ReactNode }) {
       </header>
       <main>{children}</main>
       <footer className="site-footer">
-        <div className="footer-seal"><img src={markUrl} alt="훼잇빌 한인상공회의소 로고" /></div>
+        <div className="footer-seal"><img src="/logo-wide.png" alt="훼잇빌 한인상공회의소 로고" /></div>
         <div className="footer-title">
           <p className="eyebrow light">KACC FAYETTEVILLE, NC</p>
           <h2>훼잇빌에서 함께 성장해 온<br />한인 상공인들의 보금자리.</h2>
