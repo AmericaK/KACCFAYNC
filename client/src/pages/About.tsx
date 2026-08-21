@@ -22,7 +22,7 @@ export default function About() {
         <div className="about-hero-image"><img src={heroUrl} alt="2019년 훼잇빌 한인상공회의소 회장 이·취임식 단체사진" /></div>
         <div className="about-hero-copy">
           <p className="eyebrow light">KOREAN AMERICAN CHAMBER OF COMMERCE · FAYETTEVILLE NC</p>
-          <h1>한인 사업인이 모이는 곳,<br /><em>훼잇빌 상공회의소.</em></h1>
+          <h1>한인 상공인의 든든한 지킴이<br /><em>훼잇빌 한인상공회의소</em></h1>
           <p>포트 브래그와 이웃한 훼잇빌에서, 한인 사업체의 성장과 지역사회와의 협력을 지원합니다.</p>
           <a href="#mission" className="scroll-cue"><ArrowDown size={18} /> 상공회의소가 하는 일</a>
         </div>
