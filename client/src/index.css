@@ -97,3 +97,12 @@ h1, h2, h3 { font-family: "Pretendard Variable", Pretendard, sans-serif; font-we
 .leadership-photo { margin: 0 auto 42px; max-width: 860px; border-radius: 14px; overflow: hidden; box-shadow: 0 18px 40px rgba(20,28,66,.12); }
 .leadership-photo img { width: 100%; height: auto; display: block; }
 @media (max-width: 760px) { .leadership-photo { margin-bottom: 28px; border-radius: 10px; } }
+.leadership-cols { display: grid; grid-template-columns: 1.4fr 1fr; gap: 46px; align-items: start; margin-top: 42px; }
+.leadership-col .lead-photo { border-radius: 14px; overflow: hidden; box-shadow: 0 16px 38px rgba(20,28,66,.12); }
+.leadership-col .lead-photo img { width: 100%; height: auto; display: block; }
+.lead-photo--portrait { max-width: 320px; }
+.leadership-col h2 { margin-top: 24px; font-size: clamp(26px,2.3vw,38px); line-height: 1.28; color: #263a8a; letter-spacing: -0.02em; }
+.leadership-col h2 span { color: #b8413d; }
+.leadership-col .president-name { margin-top: 22px; }
+.leadership-col > p { margin-top: 14px; color: #5e656d; font-size: 15px; line-height: 1.85; letter-spacing: -0.01em; }
+@media (max-width: 760px) { .leadership-cols { grid-template-columns: 1fr; gap: 32px; margin-top: 28px; } .leadership-col h2 { font-size: 28px; } .lead-photo--portrait { max-width: 260px; } }
