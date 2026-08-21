@@ -51,7 +51,7 @@ export default function About() {
         <div className="history-copy">
           <SectionLabel number="02" label="ROOTED HERE" />
           <p className="history-kicker">FORT BRAGG · FAYETTEVILLE · KOREAN COMMUNITY</p>
-          <h2>군사도시 훼잇빌의 토양 위에,<br />한인경제의 <em>뿌리를 깊게 내리다.</em></h2>
+          <h2>군사도시 훼잇빌의 토양 위에,<br /><span style={{ color: "#b8413d" }}>한인경제의 뿌리를 깊게 내리다.</span></h2>
           <p>훼잇빌 한인사회는 포트 브래그와 인접한 지역의 역사 속에서 성장해 왔습니다. 상공회의소는 국제결혼 한인여성들의 정착 경험과 지역 사업인들의 협력을 바탕으로, 도시의 특성에 맞는 독자적인 역할을 이어가고 있습니다.</p>
         </div>
       </section>
@@ -60,7 +60,13 @@ export default function About() {
         <SectionLabel number="03" label="LEADERSHIP" />
         <div className="leadership-grid">
           <h2>로컬 한인상공인의 리더십,<br /><span>글로벌 한상으로 이어지다.</span></h2>
-          <div className="leadership-note"><Building2 size={30} strokeWidth={1.35} /><p>창립 초기 권혁례 이사장이 조직의 기틀을 세웠고, 김미경 전 회장이 활동의 외연을 넓혔습니다. 현재는 김현철 회장과 임원진이 상공회의소 운영에 참여하고 있습니다.</p><small>공개 보도자료 기준</small></div>
+          <div className="leadership-note">
+            <div className="president-card">
+              <img src="/president.jpg" alt="훼잇빌 한인상공회의소 김현철 회장" />
+              <div className="president-name"><span>회장 · PRESIDENT</span><strong>김현철</strong></div>
+            </div>
+            <p>훼잇빌 한인상공회의소는 노스캐롤라이나 훼잇빌 지역 한인 사업체의 성장과 성공, 협력을 지원하고 증진하기 위해 설립된 비영리 단체입니다. 회원 간 네트워크 형성, 정보 공유, 경제 발전을 통해 지역 비즈니스 공동체를 강화하는 것을 목표로 합니다. 또한 지역사회와의 협력과 소통을 통해 한인 비즈니스의 권익을 대표하고 신규 사업자를 돕는 역할을 합니다.</p>
+          </div>
         </div>
       </section>
 
