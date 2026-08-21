@@ -90,3 +90,7 @@ h1, h2, h3 { font-family: "Pretendard Variable", Pretendard, sans-serif; font-we
 .gallery-card-index { width: 38px; height: 38px; display: flex; flex-direction: column; align-items: center; justify-content: center; border: 1px solid rgba(255,255,255,.75); border-radius: 50%; outline: 1px dotted rgba(237,184,169,.82); outline-offset: 3px; color: white; }.gallery-card-index b { font-size: 10px; line-height: 1; letter-spacing: .06em; }.gallery-card-index small { margin-top: 2px; font-size: 5px; line-height: 1; letter-spacing: .07em; }
 .topic-list article > span { width: 27px; height: 27px; display: grid; place-items: center; border: 1px solid rgba(184,65,61,.45); border-radius: 50%; font-size: 8px; }
 @media (max-width: 760px) { .intro-seal { position: absolute; width: 88px; height: 88px; right: 39px; bottom: 48px; opacity: .75; }.intro-seal span { font-size: 5px; }.intro-seal b { font-size: 22px; }.archive-item { grid-template-columns: 72px 1fr; }.archive-year { width: 56px; height: 56px; font-size: 14px; } }
+.president-card { display: flex; align-items: center; gap: 16px; margin-bottom: 22px; }
+.president-card img { width: 92px; height: 92px; border-radius: 50%; object-fit: cover; border: 2px solid #e3ded6; }
+.president-name span { display: block; font-size: 10px; font-weight: 800; letter-spacing: .12em; color: #b8413d; margin-bottom: 5px; }
+.president-name strong { font-size: 24px; font-weight: 700; color: #263a8a; letter-spacing: -0.02em; }
