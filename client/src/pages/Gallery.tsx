@@ -74,6 +74,7 @@ const gallery = [
   {
     year: "2015",
     events: [
+      { title: "상공회의소 창립", date: "2015", photos: ["/gallery/2015-founding.jpg"] },
       { title: "한인 친선 골프대회", date: "", photos: ["/gallery/2015-golf.jpg"] },
     ],
   },
