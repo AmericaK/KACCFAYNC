@@ -1,35 +1,104 @@
 /**
- * Design reminder — 지역을 잇는 공식 문장:
- * gallery works like a civic archive: dates, credits and restrained captions keep imagery honest.
+ * Gallery — 연도별·행사별 실제 활동 사진 아카이브.
  */
 import { ArrowUpRight, Facebook, Images } from "lucide-react";
-import { PageIntro, SectionLabel, SiteLayout } from "@/components/SiteLayout";
+import { PageIntro, SiteLayout } from "@/components/SiteLayout";
 
-const images = {
-  culture: "/gallery-culture.jpg",
-  network: "/gallery-network.jpg",
-  mentor: "/gallery-mentor.jpg",
-  hero: "/gallery-hero.jpg",
-};
-
-const galleryItems = [
-  { index: "01", category: "CULTURAL EXCHANGE", title: "한복으로 나누는 한국 전통", body: "기념식과 행사에서 한복과 전통문화를 통해 한인의 정체성을 지역사회와 나눕니다.", image: images.culture, style: "gallery-card gallery-card--large" },
-  { index: "02", category: "BUSINESS NETWORK", title: "한자리에 모인 사업인들", body: "친선 골프대회처럼 회원 사업인이 함께 모여 교류하고 서로의 업소를 알리는 자리를 이어 왔습니다.", image: images.network, style: "gallery-card gallery-card--square" },
-  { index: "03", category: "RECOGNITION", title: "함께한 이들을 기리는 자리", body: "지역사회와 상공회의소에 기여한 회원들에게 공로패를 전하며 그 헌신을 기록합니다.", image: images.mentor, style: "gallery-card gallery-card--portrait" },
-  { index: "04", category: "COMMUNITY", title: "한인 1세대를 위한 감사잔치", body: "2025년 한인 1세대를 위한 감사잔치 등 세대와 지역을 잇는 만남의 자리를 만들어 갑니다.", image: images.hero, style: "gallery-card gallery-card--wide" },
+const gallery = [
+  {
+    year: "2026",
+    events: [
+      { title: "전국수학경시대회 훼잇빌 지역 개최", date: "", photos: ["/gallery/2026-math.jpg"] },
+    ],
+  },
+  {
+    year: "2025",
+    events: [
+      { title: "참전용사·이민 1세대 감사잔치", date: "2025.11.15", photos: ["/gallery/2025-appreciation-01.jpg", "/gallery/2025-appreciation-02.jpg", "/gallery/2025-appreciation-03.jpg", "/gallery/2025-appreciation-04.jpg", "/gallery/2025-appreciation-05.jpg", "/gallery/2025-appreciation-06.jpg", "/gallery/2025-appreciation-07.jpg", "/gallery/2025-appreciation-08.jpg", "/gallery/2025-appreciation-09.jpg"] },
+      { title: "랄리 한인상공회의소 교류", date: "", photos: ["/gallery/2025-raleigh.jpg"] },
+    ],
+  },
+  {
+    year: "2024",
+    events: [
+      { title: "지역 커뮤니티 홀리데이 나눔", date: "", photos: ["/gallery/2024-holiday.jpg"] },
+    ],
+  },
+  {
+    year: "2023",
+    events: [
+      { title: "제5대 회장 이·취임식", date: "", photos: ["/gallery/2023-inauguration.jpg"] },
+    ],
+  },
+  {
+    year: "2022",
+    events: [
+      { title: "NC 훼잇빌 한인친선 골프대회", date: "", photos: ["/gallery/2022-golf.jpg"] },
+    ],
+  },
+  {
+    year: "2021",
+    events: [
+      { title: "비즈니스 리더 오찬", date: "", photos: ["/gallery/2021-luncheon-01.jpg", "/gallery/2021-luncheon-02.jpg"] },
+    ],
+  },
+  {
+    year: "2020",
+    events: [
+      { title: "코로나19 마스크 기부·지역 나눔", date: "", photos: ["/gallery/2020-covid-01.jpg", "/gallery/2020-covid-02.jpg", "/gallery/2020-covid-03.jpg", "/gallery/2020-covid-04.jpg", "/gallery/2020-covid-05.jpg", "/gallery/2020-covid-06.jpg", "/gallery/2020-covid-07.jpg", "/gallery/2020-covid-08.jpg", "/gallery/2020-covid-09.jpg", "/gallery/2020-covid-10.jpg", "/gallery/2020-covid-11.jpg"] },
+      { title: "사업자를 위한 세무 세미나", date: "", photos: ["/gallery/2020-tax.jpg"] },
+    ],
+  },
+  {
+    year: "2019",
+    events: [
+      { title: "제4대 회장 이·취임식", date: "2019.02.24", photos: ["/gallery/2019-inauguration-01.jpg", "/gallery/2019-inauguration-02.jpg", "/gallery/2019-inauguration-03.jpg", "/gallery/2019-inauguration-04.jpg", "/gallery/2019-inauguration-05.jpg", "/gallery/2019-inauguration-06.jpg", "/gallery/2019-inauguration-07.jpg", "/gallery/2019-inauguration-08.jpg", "/gallery/2019-inauguration-09.jpg", "/gallery/2019-inauguration-10.jpg", "/gallery/2019-inauguration-11.jpg", "/gallery/2019-inauguration-12.jpg", "/gallery/2019-inauguration-13.jpg"] },
+      { title: "차세대 리더 교육세미나", date: "", photos: ["/gallery/2019-seminar.jpg"] },
+      { title: "연말 커뮤니티 모임", date: "", photos: ["/gallery/2019-yearend.jpg"] },
+    ],
+  },
+  {
+    year: "2018",
+    events: [
+      { title: "한인업소록·생활정보 가이드 발간", date: "", photos: ["/gallery/2018-directory.jpg"] },
+    ],
+  },
+  {
+    year: "2016",
+    events: [
+      { title: "제15차 세계 한상대회 참가", date: "", photos: ["/gallery/2016-hansang.jpg"] },
+    ],
+  },
+  {
+    year: "2015",
+    events: [
+      { title: "한인 친선 골프대회", date: "", photos: ["/gallery/2015-golf.jpg"] },
+    ],
+  },
 ];
 
 export default function Gallery() {
   return (
     <SiteLayout>
-      <PageIntro number="03" eyebrow="GALLERY" title={<>사진으로 남긴<br /><em>활동의 기록.</em></>} description="훼잇빌 한인상공회의소가 이어 온 활동을 사진으로 살펴보세요." />
+      <PageIntro number="03" eyebrow="GALLERY" title={<>사진으로 남긴<br /><em>활동의 기록.</em></>} description="2015년부터 이어 온 훼잇빌 한인상공회의소의 활동을 연도별로 살펴보세요." />
       <section className="gallery-intro-strip"><Images size={22} strokeWidth={1.45} /><p>훼잇빌 한인상공회의소의 실제 활동 사진입니다. <strong>더 많은 현장 사진은 공식 Facebook 아카이브에서 확인하세요.</strong></p><a href="https://www.facebook.com/kacc.faync" target="_blank" rel="noreferrer">공식 사진 보기 <ArrowUpRight size={15} /></a></section>
-      <section className="gallery-section">
-        <SectionLabel number="ARCHIVE" label="FOUR SCENES OF CONNECTION" />
-        <div className="masonry-gallery">
-          {galleryItems.map((item) => <article className={item.style} key={item.index}><img src={item.image} alt={item.title} /><div className="gallery-scrim" /><div className="gallery-card-index"><b>{item.index}</b><small>ARCHIVE</small></div><div className="gallery-card-copy"><span>{item.category} · 활동기록</span><h2>{item.title}</h2><p>{item.body}</p><small>공식 Facebook 아카이브에서 더 보기</small></div></article>)}
-        </div>
-      </section>
+      <div className="gallery-years">
+        {gallery.map((yr) => (
+          <section className="gallery-year" key={yr.year}>
+            <div className="gallery-year-head"><h2>{yr.year}</h2><span /></div>
+            {yr.events.map((ev) => (
+              <div className="gallery-event" key={ev.title}>
+                <div className="gallery-event-head"><h3>{ev.title}</h3>{ev.date && <span>{ev.date}</span>}</div>
+                <div className="gallery-grid">
+                  {ev.photos.map((src, j) => (
+                    <a className="gallery-thumb" href={src} target="_blank" rel="noreferrer" key={src}><img src={src} alt={ev.title + " " + (j + 1)} loading="lazy" /></a>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </section>
+        ))}
+      </div>
       <section className="facebook-panel"><div><p className="eyebrow light">OFFICIAL PHOTO ARCHIVE</p><h2>더 많은 현장 사진은<br /><em>공식 Facebook에서.</em></h2></div><a href="https://www.facebook.com/kacc.faync" target="_blank" rel="noreferrer" className="facebook-button"><Facebook size={19} /> Kacc Fay NC <ArrowUpRight size={17} /></a></section>
     </SiteLayout>
   );
