@@ -8,6 +8,8 @@ import { PageIntro, SectionLabel, SiteLayout } from "@/components/SiteLayout";
 
 const networkingUrl = "/news-feature.jpg";
 const articleUrl = "https://atlantak.com/%eb%af%b8%ea%b5%b0%ea%b8%b0%ec%a7%80-%ea%b3%81%ec%97%90%ec%84%9c-%ec%9d%bc%ea%b5%b0-%ed%95%9c%ec%9d%b8%ea%b2%bd%ec%a0%9c%ed%9b%bc%ec%9e%87%eb%b9%8c-%ec%83%81%ec%9d%98-%ec%9d%b4/";
+const gratitudeArticleUrl = "https://atlantak.com/%ed%9b%bc%ec%9e%97%eb%b9%8c-%ed%95%9c%ec%9d%b8%ec%83%81%ec%9d%98-%ec%9d%b4%eb%af%bc-1%ec%84%b8%eb%8c%80%c2%b7%ec%b0%b8%ec%a0%84%ec%9a%a9%ec%82%ac-%ec%b4%88%ec%b2%ad-%ea%b0%90%ec%82%ac/";
+const videoUrl = "https://www.youtube.com/watch?v=CTFVAwed78Y";
 
 const archive = [
   { year: "2026", title: "전국수학경시대회 훼잇빌 지역 행사 참여", body: "KSEA가 주최한 전국수학경시대회 훼잇빌 지역 행사에 참여해 청소년들의 과학·수학 분야 참여를 지원했습니다.", tag: "차세대" },
@@ -30,7 +32,11 @@ export default function News() {
             <div className="feature-news-meta"><CalendarDays size={15} /><span>2026 · ATLANTA K</span></div>
             <h2>미군기지 곁에서 일군 한인경제…<br /><em>훼잇빌 상의 이끈 여성들</em></h2>
             <p>지역 한인경제의 성장과 상공회의소의 설립 배경, 여성 지도자들이 이어 온 리더십, 그리고 사업인 협력·차세대 교육·지역 문화교류 활동을 다룬 보도입니다.</p>
-            <a href={articleUrl} target="_blank" rel="noreferrer" className="button-link">기사 원문 보기 <ExternalLink size={16} /></a>
+            <div style={{ display: "flex", flexWrap: "wrap", gap: "10px" }}>
+              <a href={articleUrl} target="_blank" rel="noreferrer" className="button-link">기사 원문 보기 <ExternalLink size={16} /></a>
+              <a href={gratitudeArticleUrl} target="_blank" rel="noreferrer" className="button-link">감사잔치 기사 <ExternalLink size={16} /></a>
+              <a href={videoUrl} target="_blank" rel="noreferrer" className="button-link">행사 영상 보기 <ArrowUpRight size={16} /></a>
+            </div>
           </div>
         </article>
       </section>

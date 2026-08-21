@@ -32,7 +32,7 @@ export default function About() {
       <section id="mission" className="mission-section">
         <SectionLabel number="01" label="OUR ROLE" />
         <div className="mission-main">
-          <h2>한인 사업인의 곁에서,<br /><span>실질적인</span> 도움이<br />되도록.</h2>
+          <h2>한인 사업인의 곁에서,<br /><span>실질적인</span> 도움이 되도록.</h2>
           <div className="mission-text">
             <p>훼잇빌 한인상공회의소는 회원 사업체의 성장을 돕는 비영리 단체입니다. 사업인 사이의 교류와 정보 공유, 새로 정착하는 사업자 지원, 그리고 한인사회가 쌓아 온 경험을 다음 세대로 잇는 일을 합니다.</p>
             <a className="text-link" href="https://atlantak.com/%eb%af%b8%ea%b5%b0%ea%b8%b0%ec%a7%80-%ea%b3%81%ec%97%90%ec%84%9c-%ec%9d%bc%ea%b5%b0-%ed%95%9c%ec%9d%b8%ea%b2%bd%ec%a0%9c%ed%9b%bc%ec%9e%87%eb%b9%8c-%ec%83%81%ec%9d%98-%ec%9d%b4/" target="_blank" rel="noreferrer">소개 기사 읽기 <ArrowUpRight size={16} /></a>
@@ -51,7 +51,7 @@ export default function About() {
         <div className="history-copy">
           <SectionLabel number="02" label="ROOTED HERE" />
           <p className="history-kicker">FORT BRAGG · FAYETTEVILLE · KOREAN COMMUNITY</p>
-          <h2>군사도시 훼잇빌의 역사 속에서,<br />한인 경제의 <em>자리를 만들다.</em></h2>
+          <h2>군사도시 훼잇빌의 토양 위에,<br />한인경제의 <em>뿌리를 깊게 내리다.</em></h2>
           <p>훼잇빌 한인사회는 포트 브래그와 인접한 지역의 역사 속에서 성장해 왔습니다. 상공회의소는 국제결혼 한인여성들의 정착 경험과 지역 사업인들의 협력을 바탕으로, 도시의 특성에 맞는 독자적인 역할을 이어가고 있습니다.</p>
         </div>
       </section>
@@ -59,7 +59,7 @@ export default function About() {
       <section className="leadership-section">
         <SectionLabel number="03" label="LEADERSHIP" />
         <div className="leadership-grid">
-          <h2>이어 온 리더십,<br /><span>넓어지는 역할.</span></h2>
+          <h2>로컬 한인상공인의 리더십,<br /><span>글로벌 한상으로 이어지다.</span></h2>
           <div className="leadership-note"><Building2 size={30} strokeWidth={1.35} /><p>창립 초기 권혁례 이사장이 조직의 기틀을 세웠고, 김미경 전 회장이 활동의 외연을 넓혔습니다. 현재는 김현철 회장과 임원진이 상공회의소 운영에 참여하고 있습니다.</p><small>공개 보도자료 기준</small></div>
         </div>
       </section>
