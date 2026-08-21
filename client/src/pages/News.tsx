@@ -20,7 +20,7 @@ const archive = [
 export default function News() {
   return (
     <SiteLayout>
-      <PageIntro number="02" eyebrow="NEWS & ARCHIVE" title={<>함께 쌓아 온<br /><em>활동의 기록.</em></>} description="사업인 지원, 교육, 지역사회 교류까지. 훼잇빌 한인상공회의소가 이어 온 주요 활동을 기록합니다." />
+      <PageIntro number="02" eyebrow="NEWS & ARCHIVE" title={<>지금까지의<br /><em>활동 기록.</em></>} description="사업인 지원, 교육, 지역사회 교류까지. 훼잇빌 한인상공회의소가 이어 온 주요 활동입니다." />
 
       <section className="feature-news">
         <SectionLabel number="FEATURE" label="RECENT STORY" />
@@ -44,7 +44,7 @@ export default function News() {
       </section>
 
       <section className="news-bottom-cta">
-        <p className="eyebrow light">VISUAL ARCHIVE</p><h2>활동의 표정과<br />지역의 순간들.</h2><Link href="/gallery" className="button-link button-link--light">갤러리로 이동 <ArrowUpRight size={16} /></Link>
+        <p className="eyebrow light">GALLERY</p><h2>사진으로 보는<br />상공회의소의 활동.</h2><Link href="/gallery" className="button-link button-link--light">갤러리로 이동 <ArrowUpRight size={16} /></Link>
       </section>
     </SiteLayout>
   );

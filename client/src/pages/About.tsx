@@ -10,9 +10,9 @@ const heroUrl = "/about-hero.jpg";
 const logoUrl = "/logo.png";
 
 const pillars = [
-  { icon: Handshake, title: "사업체 협력", body: "회원 간 정보 공유와 교류를 통해 지역 한인 비즈니스의 연결을 돕습니다." },
-  { icon: Sprout, title: "신규 정착 지원", body: "신규 사업자와 이주민이 지역 정보와 기존 사업인 네트워크에 닿도록 돕습니다." },
-  { icon: Landmark, title: "공동체 기록", body: "선배 세대의 경험을 보존하고 다음 세대와 지역사회를 연결합니다." },
+  { icon: Handshake, title: "사업체 협력", body: "회원 사업인이 서로의 업소를 알리고, 정보와 기회를 나눕니다." },
+  { icon: Sprout, title: "신규 정착 지원", body: "새로 정착하는 사업자와 이주민이 지역 정보와 네트워크에 닿도록 돕습니다." },
+  { icon: Landmark, title: "공동체 기록", body: "선배 세대가 쌓아 온 경험을 기록하고 다음 세대로 잇습니다." },
 ];
 
 export default function About() {
@@ -22,20 +22,19 @@ export default function About() {
         <div className="about-hero-image"><img src={heroUrl} alt="2019년 훼잇빌 한인상공회의소 회장 이·취임식 단체사진" /></div>
         <div className="about-hero-copy">
           <p className="eyebrow light">KOREAN AMERICAN CHAMBER OF COMMERCE · FAYETTEVILLE NC</p>
-          <h1>지역의 기회를<br /><em>함께 연결합니다.</em></h1>
-          <p>훼잇빌 한인상공회의소는 한인 사업체의 성장과 협력, 그리고 지역사회와의 실질적인 연결을 위해 활동합니다.</p>
-          <a href="#mission" className="scroll-cue"><ArrowDown size={18} /> 우리의 역할 보기</a>
+          <h1>한인 사업인이 모이는 곳,<br /><em>훼잇빌 상공회의소.</em></h1>
+          <p>포트 브래그와 이웃한 훼잇빌에서, 한인 사업체의 성장과 지역사회와의 협력을 지원합니다.</p>
+          <a href="#mission" className="scroll-cue"><ArrowDown size={18} /> 상공회의소가 하는 일</a>
         </div>
-        <div className="about-hero-stamp"><img src={logoUrl} alt="" /><span>ESTABLISHED<br />FOR COMMUNITY</span></div>
         <div className="hero-vertical-tag">FAYETTEVILLE · NORTH CAROLINA</div>
       </section>
 
       <section id="mission" className="mission-section">
         <SectionLabel number="01" label="OUR ROLE" />
         <div className="mission-main">
-          <h2>사업과 <span>사람</span>,<br />지역사회를 잇는<br />협력의 관문.</h2>
+          <h2>한인 사업인의 곁에서,<br /><span>실질적인</span> 도움이<br />되도록.</h2>
           <div className="mission-text">
-            <p>훼잇빌 한인상공회의소는 한인 사업체의 성장과 협력을 지원하는 비영리단체입니다. 회원 간 네트워크와 정보 공유, 신규 사업자 지원을 넘어 한인사회의 역사와 세대를 연결하는 역할을 이어가고 있습니다.</p>
+            <p>훼잇빌 한인상공회의소는 회원 사업체의 성장을 돕는 비영리 단체입니다. 사업인 사이의 교류와 정보 공유, 새로 정착하는 사업자 지원, 그리고 한인사회가 쌓아 온 경험을 다음 세대로 잇는 일을 합니다.</p>
             <a className="text-link" href="https://atlantak.com/%eb%af%b8%ea%b5%b0%ea%b8%b0%ec%a7%80-%ea%b3%81%ec%97%90%ec%84%9c-%ec%9d%bc%ea%b5%b0-%ed%95%9c%ec%9d%b8%ea%b2%bd%ec%a0%9c%ed%9b%bc%ec%9e%87%eb%b9%8c-%ec%83%81%ec%9d%98-%ec%9d%b4/" target="_blank" rel="noreferrer">소개 기사 읽기 <ArrowUpRight size={16} /></a>
           </div>
         </div>
@@ -58,16 +57,16 @@ export default function About() {
       </section>
 
       <section className="leadership-section">
-        <SectionLabel number="03" label="LEADERSHIP & CONTINUITY" />
+        <SectionLabel number="03" label="LEADERSHIP" />
         <div className="leadership-grid">
-          <h2>이어 온 리더십,<br /><span>넓어지는 연결.</span></h2>
+          <h2>이어 온 리더십,<br /><span>넓어지는 역할.</span></h2>
           <div className="leadership-note"><Building2 size={30} strokeWidth={1.35} /><p>창립 초기 권혁례 이사장이 조직의 기틀을 세웠고, 김미경 전 회장이 활동의 외연을 넓혔습니다. 현재는 김현철 회장과 임원진이 상공회의소 운영에 참여하고 있습니다.</p><small>공개 보도자료 기준</small></div>
         </div>
       </section>
 
       <section className="quiet-cta">
-        <p className="eyebrow">NEXT PAGE</p>
-        <h2>활동의 기록과<br />지역의 소식을 살펴보세요.</h2>
+        <p className="eyebrow">NEWS</p>
+        <h2>지금까지의 활동을<br />살펴보세요.</h2>
         <Link href="/news" className="round-arrow" aria-label="소식 페이지 보기"><ArrowUpRight size={28} /></Link>
       </section>
     </SiteLayout>
