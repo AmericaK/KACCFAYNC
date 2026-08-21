@@ -51,7 +51,7 @@ export default function About() {
         <div className="history-copy">
           <SectionLabel number="02" label="ROOTED HERE" />
           <p className="history-kicker">FORT BRAGG · FAYETTEVILLE · KOREAN COMMUNITY</p>
-          <h2>군사도시 훼잇빌의 토양 위에,<br /><span style={{ color: "#b8413d" }}>한인경제의 뿌리를 깊게 내리다.</span></h2>
+          <h2>군사도시 훼잇빌의 토양 위에,<br /><span style={{ color: "#b8413d" }}>한인경제 뿌리를 깊게 내리다.</span></h2>
           <p>훼잇빌 한인사회는 포트 브래그와 인접한 지역의 역사 속에서 성장해 왔습니다. 상공회의소는 국제결혼 한인여성들의 정착 경험과 지역 사업인들의 협력을 바탕으로, 도시의 특성에 맞는 독자적인 역할을 이어가고 있습니다.</p>
         </div>
       </section>
@@ -73,7 +73,7 @@ export default function About() {
 
       <section className="quiet-cta">
         <p className="eyebrow">NEWS</p>
-        <h2>지금까지의 활동을<br />살펴보세요.</h2>
+        <h2>지금까지 활동을<br />살펴보세요.</h2>
         <Link href="/news" className="round-arrow" aria-label="소식 페이지 보기"><ArrowUpRight size={28} /></Link>
       </section>
     </SiteLayout>
