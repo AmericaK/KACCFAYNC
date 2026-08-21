@@ -81,7 +81,7 @@ const gallery = [
 export default function Gallery() {
   return (
     <SiteLayout>
-      <PageIntro number="03" eyebrow="GALLERY" title={<>사진으로 남긴<br /><em>활동의 기록.</em></>} description="2015년부터 이어 온 훼잇빌 한인상공회의소의 활동을 연도별로 살펴보세요." />
+      <PageIntro number="03" eyebrow="GALLERY" title={<>사진으로 기억되는<br /><em>소중한 활동 기록</em></>} description="2015년부터 이어 온 훼잇빌 한인상공회의소의 활동을 연도별로 살펴보세요." />
       <section className="gallery-intro-strip"><Images size={22} strokeWidth={1.45} /><p>훼잇빌 한인상공회의소의 실제 활동 사진입니다. <strong>더 많은 현장 사진은 공식 Facebook 아카이브에서 확인하세요.</strong></p><a href="https://www.facebook.com/kacc.faync" target="_blank" rel="noreferrer">공식 사진 보기 <ArrowUpRight size={15} /></a></section>
       <div className="gallery-years">
         {gallery.map((yr) => (
