@@ -52,7 +52,9 @@ const gallery = [
     year: "2019",
     events: [
       { title: "제4대 회장 이·취임식", date: "2019.02.24", photos: ["/gallery/2019-inauguration-01.jpg", "/gallery/2019-inauguration-02.jpg", "/gallery/2019-inauguration-03.jpg", "/gallery/2019-inauguration-04.jpg", "/gallery/2019-inauguration-05.jpg", "/gallery/2019-inauguration-06.jpg", "/gallery/2019-inauguration-07.jpg", "/gallery/2019-inauguration-08.jpg", "/gallery/2019-inauguration-09.jpg", "/gallery/2019-inauguration-10.jpg", "/gallery/2019-inauguration-11.jpg", "/gallery/2019-inauguration-12.jpg", "/gallery/2019-inauguration-13.jpg"] },
-      { title: "차세대 리더 교육세미나", date: "", photos: ["/gallery/2019-seminar.jpg"] },
+      { title: "차세대 리더 교육세미나", date: "2019.08.25", photos: ["/gallery/2019-seminar-p-01.jpg", "/gallery/2019-seminar-p-02.jpg", "/gallery/2019-seminar-p-03.jpg", "/gallery/2019-seminar-p-04.jpg", "/gallery/2019-seminar-p-05.jpg", "/gallery/2019-seminar.jpg"] },
+      { title: "친선 골프대회", date: "", photos: ["/gallery/2019-golf-01.jpg", "/gallery/2019-golf-02.jpg", "/gallery/2019-golf-03.jpg", "/gallery/2019-golf-04.jpg", "/gallery/2019-golf-05.jpg"] },
+      { title: "미주 한인상공회의소(KACC-USA) 교류", date: "", photos: ["/gallery/2019-kaccusa-01.jpg", "/gallery/2019-kaccusa-02.jpg"] },
       { title: "연말 커뮤니티 모임", date: "", photos: ["/gallery/2019-yearend.jpg"] },
     ],
   },
