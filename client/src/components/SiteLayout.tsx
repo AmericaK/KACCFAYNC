@@ -7,7 +7,7 @@ import { Menu, X, ArrowUpRight, Facebook } from "lucide-react";
 import { useEffect, useState } from "react";
 
 const logoUrl = "/logo.png";
-const markUrl = "/logo.png";
+const markUrl = "/logo-wide.png";
 
 const navItems = [
   { label: "About", labelKr: "소개", href: "/about" },
